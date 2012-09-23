@@ -1,0 +1,293 @@
+// SID specific resources.
+//
+
+#include "config.h"
+#include "res.h"
+#include "rescommon.h"
+
+#pragma code_page(28591)
+
+// original and default ENGLISH version of dialog
+
+IDD_SID_GENERAL_SETTINGS_DIALOG DIALOG DISCARDABLE 0, 0, 145, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "", IDC_SID_GENGROUP1, 10, 5, 125, 25
+    COMBOBOX        IDC_SID_ENGINE, 15, 15, 70, 50, CBS_DROPDOWNLIST |
+                    WS_GROUP | WS_TABSTOP | WS_VSCROLL
+    GROUPBOX        "", IDC_SID_GENGROUP2, 10, 35, 125, 25
+    AUTORADIOBUTTON "", IDC_SID_6581, 15, 45, 55, 10,
+                            BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "", IDC_SID_8580, 70, 45, 55, 10,
+                            BS_AUTORADIOBUTTON
+    GROUPBOX        "", IDC_SID_GENGROUP3, 10, 65, 125, 25
+    AUTOCHECKBOX    "", IDC_SID_STEREO,
+                    15, 75, 55, 10, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_SID_STEREOADDRESS, 85, 73, 45, 100, CBS_DROPDOWNLIST |
+                    WS_GROUP | WS_TABSTOP | WS_VSCROLL
+    AUTOCHECKBOX    "", IDC_SID_FILTERS,
+                    15, 105, 55, 10, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
+END
+
+// -----------------------------------------------------------------------------
+
+// original and default ENGLISH version of dialog
+
+IDD_SID_RESID_SETTINGS_DIALOG DIALOG DISCARDABLE 0, 0, 145, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "", IDC_SID_RESID_GROUP, 10, 5, 125, 50
+    LTEXT           "", IDC_SID_RESID_SAMPLE, 15, 17, 50, 8
+    COMBOBOX        IDC_SID_RESID_SAMPLING, 70, 15, 60, 50, CBS_DROPDOWNLIST |
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "", IDC_SID_RESID_PASSBAND, 15, 37, 60, 8
+    EDITTEXT        IDC_SID_RESID_PASSBAND_VALUE, 80, 35, 20, 12, WS_TABSTOP
+END
+
+// -----------------------------------------------------------------------------
+
+// original and default ENGLISH version of dialog
+
+IDD_SID_HARDSID_SETTINGS_DIALOG DIALOG DISCARDABLE 0, 0, 145, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "", IDC_HARDSID_GROUP, 10, 5, 125, 50
+    LTEXT           "", IDC_HARDSID_LEFT_LABEL, 15, 17, 70, 8
+    COMBOBOX        IDC_SID_HARDSID_LEFT_ENGINE, 80, 15, 50, 50,
+                    CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | WS_VSCROLL
+    LTEXT           "", IDC_HARDSID_RIGHT_LABEL, 15, 37, 70, 8
+    COMBOBOX        IDC_SID_HARDSID_RIGHT_ENGINE, 80, 35, 50, 50,
+                    CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | WS_VSCROLL
+END
+
+// -----------------------------------------------------------------------------
+
+// original and default ENGLISH text
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "This machine may not have a SID"
+  IDS_GENERAL               "General"
+  IDS_SID_SETTINGS          "SID settings"
+  IDS_FAST                  "fast"
+  IDS_INTERPOLATING         "interpolating"
+  IDS_RESAMPLING            "resampling"
+  IDS_FAST_RESAMPLING       "fast resampling"
+  IDS_SID_GENGROUP1         "SID Engine"
+  IDS_SID_GENGROUP2         "SID Model"
+  IDS_SID_6581              "6581 (old)"  
+  IDS_SID_8580              "8580 (new)"
+  IDS_SID_GENGROUP3         "SID Stereo"
+  IDS_SID_STEREO_AT         "Stereo SID at"
+  IDS_SID_FILTERS           "SID Filters"
+  IDS_SID_RESID_GROUP       "reSID options"
+  IDS_SID_RESID_SAMPLE      "Sample method"
+  IDS_SID_RESID_PASSBAND    "Passband (0-90%)"
+  IDS_HARDSID_GROUP         "Device selection"
+  IDS_HARDSID_LEFT_LABEL    "Left/Main device"
+  IDS_HARDSID_RIGHT_LABEL   "Right device"
+END
+
+
+// GERMAN text
+
+STRINGTABLE
+LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "Diese Maschine hat möglicherweise keinen SID"
+  IDS_GENERAL               "Allgemein"
+  IDS_SID_SETTINGS          "SID Einstellungen"
+  IDS_FAST                  "Schnell"
+  IDS_INTERPOLATING         "Interpolierend"
+  IDS_RESAMPLING            "Resampling"
+  IDS_FAST_RESAMPLING       "Schnelles Resampling"
+  IDS_SID_GENGROUP1         "SID Engine"
+  IDS_SID_GENGROUP2         "SID Modell"
+  IDS_SID_6581              "6581 (alt)"
+  IDS_SID_8580              "8580 (neu)"
+  IDS_SID_GENGROUP3         "SID Stereo"
+  IDS_SID_STEREO_AT         "Stereo SID bei"
+  IDS_SID_FILTERS           "SID Filter"
+  IDS_SID_RESID_GROUP       "reSID Optionen"
+  IDS_SID_RESID_SAMPLE      "Sample Methode"
+  IDS_SID_RESID_PASSBAND    "Passband (0-90%)"
+  IDS_HARDSID_GROUP         "Geräte Auswahl"
+  IDS_HARDSID_LEFT_LABEL    "Links/Haupt Gerät"
+  IDS_HARDSID_RIGHT_LABEL   "Rechtes Gerät"
+END
+
+
+// FRENCH text
+
+STRINGTABLE
+LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "Cette machine n'a peut-être pas de SID"
+  IDS_GENERAL               "Général"
+  IDS_SID_SETTINGS          "Paramètres SID"
+  IDS_FAST                  "rapide"
+  IDS_INTERPOLATING         "par interpolation"
+  IDS_RESAMPLING            "rééchantillonage"
+  IDS_FAST_RESAMPLING       "rééchantillonage rapide"
+  IDS_SID_GENGROUP1         "Engin SID"
+  IDS_SID_GENGROUP2         "Modèle SID"
+  IDS_SID_6581              "6581 (ancien)"  
+  IDS_SID_8580              "8580 (nouveau)"
+  IDS_SID_GENGROUP3         "SID Stéréo"
+  IDS_SID_STEREO_AT         "SID Stéréo à"
+  IDS_SID_FILTERS           "Filtres SID"
+  IDS_SID_RESID_GROUP       "Options reSID"
+  IDS_SID_RESID_SAMPLE      "Méthode d'échantillonnage"
+  IDS_SID_RESID_PASSBAND    "Bande passante (0-90%)"
+  IDS_HARDSID_GROUP         "Sélection des périphériques"
+  IDS_HARDSID_LEFT_LABEL    "Périphérique gauche/principal"
+  IDS_HARDSID_RIGHT_LABEL   "Périphérique droit"
+END
+
+
+// HUNGARIAN text
+
+#pragma code_page(28592)
+STRINGTABLE
+LANGUAGE LANG_HUNGARIAN, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "Ennek a gépnek nem lehet SIDje"
+  IDS_GENERAL               "Általános"
+  IDS_SID_SETTINGS          "SID beállításai"
+  IDS_FAST                  "gyors"
+  IDS_INTERPOLATING         "interpoláló"
+  IDS_RESAMPLING            "újramintavételezõ"
+  IDS_FAST_RESAMPLING       "gyors újramintavételezõ"
+  IDS_SID_GENGROUP1         "SID motor"
+  IDS_SID_GENGROUP2         "SID típus"
+  IDS_SID_6581              "6581 (régi)"  
+  IDS_SID_8580              "8580 (új)"
+  IDS_SID_GENGROUP3         "SID sztereó"
+  IDS_SID_STEREO_AT         "Sztereó SID itt:"
+  IDS_SID_FILTERS           "SID szûrõk"
+  IDS_SID_RESID_GROUP       "reSID opciók"
+  IDS_SID_RESID_SAMPLE      "Mintavételezés módja"
+  IDS_SID_RESID_PASSBAND    "Áteresztõság (0-90%)"
+  IDS_HARDSID_GROUP         "Eszközök kiválasztása"
+  IDS_HARDSID_LEFT_LABEL    "Bal oldali/fõ eszköz"
+  IDS_HARDSID_RIGHT_LABEL   "Jobb oldali eszköz"
+END
+#pragma code_page(28591)
+
+
+// ITALIAN text
+
+STRINGTABLE
+LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "Questa macchina potrebbe non avere un SID"
+  IDS_GENERAL               "Generale"
+  IDS_SID_SETTINGS          "Impostazioni SID"
+  IDS_FAST                  "veloce"
+  IDS_INTERPOLATING         "Interpolazione"
+  IDS_RESAMPLING            "ricampionamento"
+  IDS_FAST_RESAMPLING       "ricampionamento veloce"
+  IDS_SID_GENGROUP1         "Motore SID"
+  IDS_SID_GENGROUP2         "Modello di SID"
+  IDS_SID_6581              "6581 (vecchio)"
+  IDS_SID_8580              "8580 (nuovo)"
+  IDS_SID_GENGROUP3         "Stereo SID"
+  IDS_SID_STEREO_AT         "Stereo SID a"
+  IDS_SID_FILTERS           "Filtri SID"
+  IDS_SID_RESID_GROUP       "Opzioni reSID"
+  IDS_SID_RESID_SAMPLE      "Metodo di campionamento"
+  IDS_SID_RESID_PASSBAND    "Passabanda (0-90%)"
+  IDS_HARDSID_GROUP         "Selezione dispositivo"
+  IDS_HARDSID_LEFT_LABEL    "Dispositivo sinistro/principale"
+  IDS_HARDSID_RIGHT_LABEL   "Dispositivo destro"
+END
+
+
+// DUTCH text
+
+STRINGTABLE
+LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "Deze machine heeft mogelijk geen SID"
+  IDS_GENERAL               "Algemeen"
+  IDS_SID_SETTINGS          "SID-instellingen"
+  IDS_FAST                  "snel"
+  IDS_INTERPOLATING         "interpolating"
+  IDS_RESAMPLING            "resampling"
+  IDS_FAST_RESAMPLING       "snelle resampling"
+  IDS_SID_GENGROUP1         "SID-kern"
+  IDS_SID_GENGROUP2         "SID-model"
+  IDS_SID_6581              "6581 (oud)"
+  IDS_SID_8580              "8580 (nieuw)"
+  IDS_SID_GENGROUP3         "Stereo-SID"
+  IDS_SID_STEREO_AT         "Stereo-SID op"
+  IDS_SID_FILTERS           "SID-filters"
+  IDS_SID_RESID_GROUP       "reSID-opties"
+  IDS_SID_RESID_SAMPLE      "Sample methode"
+  IDS_SID_RESID_PASSBAND    "Passband (0-90%)"
+  IDS_HARDSID_GROUP         "Apparaatselectie"
+  IDS_HARDSID_LEFT_LABEL    "Linker-/hoofdapparaat"
+  IDS_HARDSID_RIGHT_LABEL   "Rechterapparaat"
+END
+
+
+// POLISH text
+
+#pragma code_page(28592)
+STRINGTABLE
+LANGUAGE LANG_POLISH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "This machine may not have a SID"
+  IDS_GENERAL               "General"
+  IDS_SID_SETTINGS          "SID settings"
+  IDS_FAST                  "fast"
+  IDS_INTERPOLATING         "interpolating"
+  IDS_RESAMPLING            "resampling"
+  IDS_FAST_RESAMPLING       "fast resampling"
+  IDS_SID_GENGROUP1         "Ustawienia uk³adu SID"
+  IDS_SID_GENGROUP2         "Model SID"
+  IDS_SID_6581              "6581 (stary)"
+  IDS_SID_8580              "8580 (nowy)"
+  IDS_SID_GENGROUP3         "Drugi SID"
+  IDS_SID_STEREO_AT         "Adres drugiego SID"
+  IDS_SID_FILTERS           "SID filtry"
+  IDS_SID_RESID_GROUP       "reSID Opcje"
+  IDS_SID_RESID_SAMPLE      "Metoda samplowania"
+  IDS_SID_RESID_PASSBAND    "Passband (0-90%)"
+  IDS_HARDSID_GROUP         "Device selection"
+  IDS_HARDSID_LEFT_LABEL    "Left/Main device"
+  IDS_HARDSID_RIGHT_LABEL   "Right device"
+END
+#pragma code_page(28591)
+
+
+// SWEDISH text
+
+STRINGTABLE
+LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_THIS_MACHINE_NO_SID   "Denna maskin kan inte ha en SID"
+  IDS_GENERAL               "Allmänt"
+  IDS_SID_SETTINGS          "SID-inställningar"
+  IDS_FAST                  "snabbt"
+  IDS_INTERPOLATING         "interpolerande"
+  IDS_RESAMPLING            "omsamplande"
+  IDS_FAST_RESAMPLING       "snabb omsampling"
+  IDS_SID_GENGROUP1         "SID-motor"
+  IDS_SID_GENGROUP2         "SID-modell"
+  IDS_SID_6581              "6581 (gammal)"  
+  IDS_SID_8580              "8580 (ny)"
+  IDS_SID_GENGROUP3         "SID Stereo"
+  IDS_SID_STEREO_AT         "Stereo-SID på"
+  IDS_SID_FILTERS           "SID-filter"
+  IDS_SID_RESID_GROUP       "reSID-inställningar"
+  IDS_SID_RESID_SAMPLE      "Samplingsmetod"
+  IDS_SID_RESID_PASSBAND    "Passband (0-90%)"
+  IDS_HARDSID_GROUP         "Välj enhet"
+  IDS_HARDSID_LEFT_LABEL    "Vänster/huvudenhet"
+  IDS_HARDSID_RIGHT_LABEL   "Höger enhet"
+END

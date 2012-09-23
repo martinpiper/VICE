@@ -1,0 +1,56 @@
+*** VICE Version 2.0 ***
+ 
+Welcome to x64, the free portable C64 Emulator.
+ 
+Current VICE team members:
+A. Boose, D. Lem, T. Biczo, A. Dehmel, T. Bretz, A. Matthies,
+M. Pottendorfer, M. Brenner, S. Trikaliotis, M. van den Heuvel,
+C. Vogelgsang, Fabrizio Gennari.
+ 
+This is free software with ABSOLUTELY NO WARRANTY.
+See the "About VICE" command for more info.
+ 
+Loading system file `C:\work\VICE\data\C64\kernal'.
+C64MEM: Kernal rev #3.
+Loading system file `C:\work\VICE\data\C64\basic'.
+Loading system file `C:\work\VICE\data\C64\chargen'.
+LoadLibrary opencbm.dll failed!
+Loading system file `C:\work\VICE\data\PRINTER\mps803'.
+Palette: Loading palette `C:\work\VICE\data\PRINTER\mps803.vpl'.
+Loading system file `C:\work\VICE\data\PRINTER\nl10-cbm'.
+Palette: Loading palette `C:\work\VICE\data\PRINTER\mps803.vpl'.
+NL10: Printer driver initialized.
+Loading system file `C:\work\VICE\data\DRIVES\dos1541'.
+Loading system file `C:\work\VICE\data\DRIVES\d1541II'.
+Loading system file `C:\work\VICE\data\DRIVES\dos1570'.
+Loading system file `C:\work\VICE\data\DRIVES\dos1571'.
+Loading system file `C:\work\VICE\data\DRIVES\dos1581'.
+Loading system file `C:\work\VICE\data\DRIVES\dos2031'.
+Loading system file `C:\work\VICE\data\DRIVES\dos2040'.
+Loading system file `C:\work\VICE\data\DRIVES\dos3040'.
+Loading system file `C:\work\VICE\data\DRIVES\dos4040'.
+Loading system file `C:\work\VICE\data\DRIVES\dos1001'.
+Drive: Finished loading ROM images.
+Refresh rate: 00369E99 / 71766.50 = 49.878
+RGB surface...
+dwRGBBitCount: 32
+dwRBitMask: 00ff0000
+dwGBitMask: 0000ff00
+dwBBitMask: 000000ff
+Sound: Available sound devices: dx wmm dummy fs speed dump wav voc iff aiff ffmpegaudio
+Keyboard: Loading keymap `C:\work\VICE\data\C64\win_pos.vkm'.
+AUTOSTART: Autodetecting image type of `C:\work\C64\MusicStudio2\MusicStudio\t.prg'.
+Filesystem Image: Unknown disk image `C:\work\C64\MusicStudio2\MusicStudio\t.prg'.
+Tape: Error - Cannot open file `C:\work\C64\MusicStudio2\MusicStudio\t.prg'
+AUTOSTART: Resetting the machine to autostart 'T.PRG'
+AUTOSTART: Preparing to load PRG file `C:\work\C64\MusicStudio2\MusicStudio\t.prg'.
+AUTOSTART: `C:\work\C64\MusicStudio2\MusicStudio\t.prg' recognized as program/p00 file.
+Main CPU: starting at ($FFFC).
+Main CPU: RESET.
+Sound: Opened device `dx', speed 22050Hz, fragment size 23ms, buffer size 371ms
+reSID: MOS6581, filter on, sampling rate 22050Hz - fast
+AUTOSTART: Loading program 'T.PRG'
+AUTOSTART: Starting program.
+
+Exiting...
+Sound: Closing device `dx'

@@ -1,0 +1,64 @@
+							-*- Outline -*-
+
+What are we going to do next (or not)
+=====================================
+
+* General improvements
+----------------------
+
+- Write real MS-DOS and Win32 documentation (any volunteers?).
+
+- Allow tape loading without the virtually pressed "Play" button,
+  which can break some programs that do not like it to be pressed
+  (e.g. Turbo Assembler).
+
+- Emulate shifted keys more accurately by delaying the shifted key
+  after the shift.
+
+- Emulate the RESTORE key more accurately.
+
+- Some more Kernal patches, for instance for changing colors and
+  patching the reset routine to make it faster (maybe configurable).
+
+- Improve sound snapshot.
+
+- Add some wishlist.
+
+* C64 improvements
+------------------
+
+- Cycle exact sprite emulation.
+
+* C128 improvements
+-------------------
+
+- Support for fast mode (2MHz).
+
+* VIC20 improvements
+--------------------
+
+- Improve the accuracy of the audio emulation.
+
+- Cycle exact memory fetch of the VIC.
+
+* PET improvements
+------------------
+
+- Reimplement the CRTC caching functionality
+
+* CBM-II improvements
+------------------
+
+- Reimplement the CRTC caching functionality
+
+* Plus/4
+--------
+
+- Improve Plus/4 emulator.
+
+* Drive improvements
+--------------------
+
+- Implement CBM DOS 1.0 support (670 blocks free) together with CBM 2040
+  disk drive emulation.
+
