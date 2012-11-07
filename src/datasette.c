@@ -273,6 +273,17 @@ inline static int datasette_move_buffer_back(int offset)
 
 inline static int fetch_gap(CLOCK *gap, int *direction, long read_tap)
 {
+// If defined add a some tape pulse variation. Useful for debugging tape loaders.
+//#define WOBBLE 64
+#ifdef WOBBLE
+// Choose random or pattern based variation
+#define RANDOM_VAR
+#ifdef RANDOM_VAR
+	static int sTapeVariation = 0;
+#endif
+	int variation;
+#endif
+
     if ((read_tap >= last_tap) || (read_tap < 0))
         return -1;
 
@@ -292,6 +303,22 @@ inline static int fetch_gap(CLOCK *gap, int *direction, long read_tap)
         if (!(*gap))
             *gap = (CLOCK)datasette_zero_gap_delay;
     }
+
+#ifdef WOBBLE
+#ifdef RANDOM_VAR
+	variation = (rand()%WOBBLE)-(WOBBLE/2);
+#else
+	variation = sTapeVariation++;
+	if (sTapeVariation > (WOBBLE/2))
+	{
+		sTapeVariation = -(WOBBLE/2);
+	}
+#endif
+	if( ( variation > 0 ) || ( (variation < 0) && ( (int)gap > -variation ) ) )
+	{
+		*gap += variation;
+	}
+#endif
 
     return 0;
 }
