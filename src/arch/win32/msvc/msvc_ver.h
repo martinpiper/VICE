@@ -1,1 +1,1 @@
-#define MSVC_VER 1200
+#define MSVC_VER 1700

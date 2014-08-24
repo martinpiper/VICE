@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>vic20</SccProjectName>
+    <SccLocalPath>..\..</SccLocalPath>
+    <ProjectGuid>{1E5BA188-6664-423B-9FE3-604A82255873}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\libs\vic20\Debug\</OutDir>
+    <IntDir>.\libs\vic20\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\libs\vic20\Release\</OutDir>
+    <IntDir>.\libs\vic20\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\drive;..\..\tape;..\..\raster;..\..\monitor;..\..\sid;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\vic20\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\vic20\Debug\vic20.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\vic20\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\vic20\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\vic20\Debug\vic20.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\vic20\Debug\vic20.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\drive;..\..\tape;..\..\raster;..\..\monitor;..\..\sid;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\vic20\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\vic20\Release\vic20.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\vic20\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\vic20\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\vic20\Release\vic20.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\vic20\Release\vic20.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\vic20\vic-cmdline-options.c" />
+    <ClCompile Include="..\..\vic20\vic-color.c" />
+    <ClCompile Include="..\..\vic20\vic-draw.c" />
+    <ClCompile Include="..\..\vic20\vic-mem.c" />
+    <ClCompile Include="..\..\vic20\vic-resources.c" />
+    <ClCompile Include="..\..\vic20\vic-snapshot.c" />
+    <ClCompile Include="..\..\vic20\vic.c" />
+    <ClCompile Include="..\..\vic20\vic20-cmdline-options.c" />
+    <ClCompile Include="..\..\vic20\vic20-resources.c" />
+    <ClCompile Include="..\..\vic20\vic20-snapshot.c" />
+    <ClCompile Include="..\..\vic20\vic20.c" />
+    <ClCompile Include="..\..\vic20\vic20bus.c" />
+    <ClCompile Include="..\..\vic20\vic20cartridge.c" />
+    <ClCompile Include="..\..\vic20\vic20datasette.c" />
+    <ClCompile Include="..\..\vic20\vic20drive.c" />
+    <ClCompile Include="..\..\vic20\vic20iec.c" />
+    <ClCompile Include="..\..\vic20\vic20ieeevia1.c" />
+    <ClCompile Include="..\..\vic20\vic20ieeevia2.c" />
+    <ClCompile Include="..\..\vic20\vic20mem.c" />
+    <ClCompile Include="..\..\vic20\vic20memrom.c" />
+    <ClCompile Include="..\..\vic20\vic20memsnapshot.c" />
+    <ClCompile Include="..\..\vic20\vic20printer.c" />
+    <ClCompile Include="..\..\vic20\vic20rom.c" />
+    <ClCompile Include="..\..\vic20\vic20romset.c" />
+    <ClCompile Include="..\..\vic20\vic20rsuser.c" />
+    <ClCompile Include="..\..\vic20\vic20sound.c" />
+    <ClCompile Include="..\..\vic20\vic20via1.c" />
+    <ClCompile Include="..\..\vic20\vic20via2.c" />
+    <ClCompile Include="..\..\vic20\vic20video.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="base.vcxproj">
+      <Project>{0a2b5a1c-434a-48b4-8852-ba085bf73b16}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

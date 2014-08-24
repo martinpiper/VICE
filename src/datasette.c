@@ -278,7 +278,7 @@ inline static int fetch_gap(CLOCK *gap, int *direction, long read_tap)
 #ifdef WOBBLE
 // Choose random or pattern based variation
 #define RANDOM_VAR
-#ifdef RANDOM_VAR
+#ifndef RANDOM_VAR
 	static int sTapeVariation = 0;
 #endif
 	int variation;

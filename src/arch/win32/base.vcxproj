@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>base</SccProjectName>
+    <SccLocalPath>..\..</SccLocalPath>
+    <ProjectGuid>{0A2B5A1C-434A-48B4-8852-BA085BF73B16}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\libs\base\Debug\</OutDir>
+    <IntDir>.\libs\base\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\libs\base\Release\</OutDir>
+    <IntDir>.\libs\base\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\lib\zlib;..\..\drive;..\..\vdrive;..\..\rs232drv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DONT_USE_UNISTD_H;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\base\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\base\Debug\base.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\base\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\base\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\base\Debug\base.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\base\Debug\base.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\lib\zlib;..\..\drive;..\..\vdrive;..\..\rs232drv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DONT_USE_UNISTD_H;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\base\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\base\Release\base.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\base\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\base\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\base\Release\base.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\base\Release\base.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\alarm.c" />
+    <ClCompile Include="..\..\attach.c" />
+    <ClCompile Include="..\..\autostart.c" />
+    <ClCompile Include="..\..\cbmdos.c" />
+    <ClCompile Include="..\..\cbmimage.c" />
+    <ClCompile Include="..\..\charset.c" />
+    <ClCompile Include="..\..\clipboard.c" />
+    <ClCompile Include="..\..\clkguard.c" />
+    <ClCompile Include="..\..\cmdline.c" />
+    <ClCompile Include="..\..\color.c" />
+    <ClCompile Include="..\..\crc32.c" />
+    <ClCompile Include="..\..\datasette.c" />
+    <ClCompile Include="..\..\debug.c" />
+    <ClCompile Include="..\..\dma.c" />
+    <ClCompile Include="..\..\emuid.c" />
+    <ClCompile Include="..\..\event.c" />
+    <ClCompile Include="..\..\findpath.c" />
+    <ClCompile Include="..\..\fliplist.c" />
+    <ClCompile Include="..\..\gcr.c" />
+    <ClCompile Include="..\..\info.c" />
+    <ClCompile Include="..\..\init.c" />
+    <ClCompile Include="..\..\initcmdline.c" />
+    <ClCompile Include="..\..\interrupt.c" />
+    <ClCompile Include="..\..\ioutil.c" />
+    <ClCompile Include="..\..\joystick.c" />
+    <ClCompile Include="..\..\kbdbuf.c" />
+    <ClCompile Include="..\..\keyboard.c" />
+    <ClCompile Include="..\..\lib.c" />
+    <ClCompile Include="..\..\log.c" />
+    <ClCompile Include="..\..\machine-bus.c" />
+    <ClCompile Include="..\..\machine.c" />
+    <ClCompile Include="..\..\mouse.c" />
+    <ClCompile Include="..\..\network.c" />
+    <ClCompile Include="..\..\palette.c" />
+    <ClCompile Include="..\..\ram.c" />
+    <ClCompile Include="..\..\rawfile.c" />
+    <ClCompile Include="..\..\resources.c" />
+    <ClCompile Include="..\..\romset.c" />
+    <ClCompile Include="..\..\screenshot.c" />
+    <ClCompile Include="..\..\snapshot.c" />
+    <ClCompile Include="..\..\sound.c" />
+    <ClCompile Include="..\..\sysfile.c" />
+    <ClCompile Include="..\..\translate.c" />
+    <ClCompile Include="..\..\traps.c" />
+    <ClCompile Include="..\..\util.c" />
+    <ClCompile Include="..\..\vsync.c" />
+    <ClCompile Include="..\..\zfile.c" />
+    <ClCompile Include="..\..\zipcode.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\translate.txt">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\data\gentranslate ..\..\translate.txt ..\..\translate.h ..\..\translate_table.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating translate.h and translate_table.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputDir)translate.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\translate.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\data\gentranslate ..\..\translate.txt ..\..\translate.h ..\..\translate_table.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating translate.h and translate_table.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputDir)translate.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\translate.txt;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="gentranslate.vcxproj">
+      <Project>{e4df952d-f365-4dc5-8b17-c50a70ba2033}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

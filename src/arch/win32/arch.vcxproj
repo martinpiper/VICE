@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>arch</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <ProjectGuid>{9C7A2E21-8496-4528-80BC-2E3F2264677F}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\libs\arch\Release\</OutDir>
+    <IntDir>.\libs\arch\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\libs\arch\Debug\</OutDir>
+    <IntDir>.\libs\arch\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\drive;..\..\vdrive;..\..\c64;..\..\c128;..\..\vic20;..\..\pet;..\..\cbm2;..\..\raster;..\..\monitor;..\..\lib\libffmpeg;..\..\plus4;..\..\sid;.\msvc\wpcap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\arch\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\arch\Release\arch.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\arch\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\arch\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\arch\Release\arch.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\arch\Release\arch.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\drive;..\..\vdrive;..\..\c64;..\..\c128;..\..\vic20;..\..\pet;..\..\cbm2;..\..\raster;..\..\monitor;..\..\lib\libffmpeg;..\..\plus4;..\..\sid;.\msvc\wpcap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\arch\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\arch\Debug\arch.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\arch\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\arch\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\arch\Debug\arch.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\arch\Debug\arch.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="archdep.c" />
+    <ClCompile Include="blockdev.c" />
+    <ClCompile Include="c128ui.c" />
+    <ClCompile Include="c64ui.c" />
+    <ClCompile Include="catweaselmkiii.c" />
+    <ClCompile Include="cbm2ui.c" />
+    <ClCompile Include="console.c" />
+    <ClCompile Include="dirent.c" />
+    <ClCompile Include="ffmpeglib.c" />
+    <ClCompile Include="fullscrn.c" />
+    <ClCompile Include="gifdrv.c" />
+    <ClCompile Include="hardsid.c" />
+    <ClCompile Include="intl.c" />
+    <ClCompile Include="joy.c" />
+    <ClCompile Include="kbd.c" />
+    <ClCompile Include="mousedrv.c" />
+    <ClCompile Include="opencbmlib.c" />
+    <ClCompile Include="parsid.c" />
+    <ClCompile Include="petui.c" />
+    <ClCompile Include="plus4ui.c" />
+    <ClCompile Include="rs232.c" />
+    <ClCompile Include="signals.c" />
+    <ClCompile Include="statusbar.c" />
+    <ClCompile Include="system.c" />
+    <ClCompile Include="tfearch.c" />
+    <ClCompile Include="ui-resources.c" />
+    <ClCompile Include="ui.c" />
+    <ClCompile Include="uiacia.c" />
+    <ClCompile Include="uiattach.c" />
+    <ClCompile Include="uic128.c" />
+    <ClCompile Include="uic64_256k.c" />
+    <ClCompile Include="uic64cart.c" />
+    <ClCompile Include="uicart.c" />
+    <ClCompile Include="uicbm2set.c" />
+    <ClCompile Include="uicmdline.c" />
+    <ClCompile Include="uiconsole.c" />
+    <ClCompile Include="uidatasette.c" />
+    <ClCompile Include="uidigimax.c" />
+    <ClCompile Include="uidrivec128.c" />
+    <ClCompile Include="uidrivec64.c" />
+    <ClCompile Include="uidrivepetcbm2.c" />
+    <ClCompile Include="uidriveplus4.c" />
+    <ClCompile Include="uidrivevic20.c" />
+    <ClCompile Include="uievent.c" />
+    <ClCompile Include="uifliplist.c" />
+    <ClCompile Include="uigeoram.c" />
+    <ClCompile Include="uihelp.c" />
+    <ClCompile Include="uiide64.c" />
+    <ClCompile Include="uijoystick.c" />
+    <ClCompile Include="uikeyboard.c" />
+    <ClCompile Include="uilib.c" />
+    <ClCompile Include="uimediafile.c" />
+    <ClCompile Include="uimmc64.c" />
+    <ClCompile Include="uimon.c" />
+    <ClCompile Include="uimouse.c" />
+    <ClCompile Include="uinetwork.c" />
+    <ClCompile Include="uiperipheral.c" />
+    <ClCompile Include="uipetreu.c" />
+    <ClCompile Include="uipetset.c" />
+    <ClCompile Include="uiplus256k.c" />
+    <ClCompile Include="uiplus4cart.c" />
+    <ClCompile Include="uiplus4mem.c" />
+    <ClCompile Include="uiplus60k.c" />
+    <ClCompile Include="uiquicksnapshot.c" />
+    <ClCompile Include="uiram.c" />
+    <ClCompile Include="uiramcart.c" />
+    <ClCompile Include="uireu.c" />
+    <ClCompile Include="uirom.c" />
+    <ClCompile Include="uirs232.c" />
+    <ClCompile Include="uirs232user.c" />
+    <ClCompile Include="uisid.c" />
+    <ClCompile Include="uisidcart.c" />
+    <ClCompile Include="uisnapshot.c" />
+    <ClCompile Include="uisound.c" />
+    <ClCompile Include="uispeed.c" />
+    <ClCompile Include="uitfe.c" />
+    <ClCompile Include="uivicii.c" />
+    <ClCompile Include="uivicset.c" />
+    <ClCompile Include="uivideo.c" />
+    <ClCompile Include="vic20ui.c" />
+    <ClCompile Include="video.c" />
+    <ClCompile Include="vsidui.c" />
+    <ClCompile Include="vsyncarch.c" />
+    <ClCompile Include="winmain.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res.txt">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\data\genwinres res.h menuid.h res.txt resdialogs.txt resmenu.txt resstrings.txt</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating res.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputDir)res.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">res.txt;resdialogs.txt;resmenu.txt;resstrings.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\data\genwinres res.h menuid.h res.txt resdialogs.txt resmenu.txt resstrings.txt</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating res.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputDir)res.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">res.txt;resdialogs.txt;resmenu.txt;resstrings.txt;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="base.vcxproj">
+      <Project>{0a2b5a1c-434a-48b4-8852-ba085bf73b16}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="genmsvcver.vcxproj">
+      <Project>{3472f0ad-e897-4c6f-aed7-65f426daa9ef}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="gentranslate.vcxproj">
+      <Project>{e4df952d-f365-4dc5-8b17-c50a70ba2033}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="genwinres.vcxproj">
+      <Project>{4ab17430-5b5d-4c5a-8bc1-142a9562391d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

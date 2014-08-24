@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>plus4</SccProjectName>
+    <SccLocalPath>..\..</SccLocalPath>
+    <ProjectGuid>{1EEC62FD-072E-471E-B86D-B432B089735E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\libs\plus4\Release\</OutDir>
+    <IntDir>.\libs\plus4\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\libs\plus4\Debug\</OutDir>
+    <IntDir>.\libs\plus4\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\drive;..\..\tape;..\..\raster;..\..\monitor;..\..\sid;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\plus4\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\plus4\Release\plus4.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\plus4\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\plus4\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\plus4\Release\plus4.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\plus4\Release\plus4.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\msvc;.\;..\..\;..\..\drive;..\..\tape;..\..\raster;..\..\monitor;..\..\sid;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\libs\plus4\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\libs\plus4\Debug\plus4.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\libs\plus4\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\plus4\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\plus4\Debug\plus4.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\libs\plus4\Debug\plus4.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\plus4\plus4-cmdline-options.c" />
+    <ClCompile Include="..\..\plus4\plus4-resources.c" />
+    <ClCompile Include="..\..\plus4\plus4-snapshot.c" />
+    <ClCompile Include="..\..\plus4\plus4.c" />
+    <ClCompile Include="..\..\plus4\plus4acia.c" />
+    <ClCompile Include="..\..\plus4\plus4bus.c" />
+    <ClCompile Include="..\..\plus4\plus4cart.c" />
+    <ClCompile Include="..\..\plus4\plus4cpu.c" />
+    <ClCompile Include="..\..\plus4\plus4datasette.c" />
+    <ClCompile Include="..\..\plus4\plus4drive.c" />
+    <ClCompile Include="..\..\plus4\plus4iec.c" />
+    <ClCompile Include="..\..\plus4\plus4mem.c" />
+    <ClCompile Include="..\..\plus4\plus4memcsory256k.c" />
+    <ClCompile Include="..\..\plus4\plus4memhannes256k.c" />
+    <ClCompile Include="..\..\plus4\plus4memlimit.c" />
+    <ClCompile Include="..\..\plus4\plus4memrom.c" />
+    <ClCompile Include="..\..\plus4\plus4memsnapshot.c" />
+    <ClCompile Include="..\..\plus4\plus4parallel.c" />
+    <ClCompile Include="..\..\plus4\plus4pio1.c" />
+    <ClCompile Include="..\..\plus4\plus4pio2.c" />
+    <ClCompile Include="..\..\plus4\plus4printer.c" />
+    <ClCompile Include="..\..\plus4\plus4rom.c" />
+    <ClCompile Include="..\..\plus4\plus4romset.c" />
+    <ClCompile Include="..\..\plus4\plus4tcbm.c" />
+    <ClCompile Include="..\..\plus4\plus4video.c" />
+    <ClCompile Include="..\..\plus4\ted-badline.c" />
+    <ClCompile Include="..\..\plus4\ted-cmdline-options.c" />
+    <ClCompile Include="..\..\plus4\ted-color.c" />
+    <ClCompile Include="..\..\plus4\ted-draw.c" />
+    <ClCompile Include="..\..\plus4\ted-fetch.c" />
+    <ClCompile Include="..\..\plus4\ted-irq.c" />
+    <ClCompile Include="..\..\plus4\ted-mem.c" />
+    <ClCompile Include="..\..\plus4\ted-resources.c" />
+    <ClCompile Include="..\..\plus4\ted-snapshot.c" />
+    <ClCompile Include="..\..\plus4\ted-sound.c" />
+    <ClCompile Include="..\..\plus4\ted-timer.c" />
+    <ClCompile Include="..\..\plus4\ted-timing.c" />
+    <ClCompile Include="..\..\plus4\ted.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\plus4\ted-badline.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="base.vcxproj">
+      <Project>{0a2b5a1c-434a-48b4-8852-ba085bf73b16}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
